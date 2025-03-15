@@ -5,8 +5,8 @@
 #@article{hel25YOLO11++UAES, 
 #title={Universal Autonomous Driving System: Innovation with YOLO11++-based Universal Autonomous Expert System}, 
 #author={Maher, Helaoui and Sahbi, Bahroun and Ezzeddine, Zagrouba}, 
-#journal={The Visual Computer (Submitted)}, 
-#url = {https://github.com/maherhelaoui/YOLO11pp-based-UAES/}, 
+#journal={Machine Vision and Applications (Submited)}, 
+#url = {https://github.com/maherhelaoui/UATM-Based-yolo11--UAES}, 
 #year={2025}, publisher={Springer} }
 
 
@@ -36,35 +36,6 @@ model = model2
 model3 = YOLO("yolo11++CC128.pt")  # detect cars bus trained on Coco Dataset 319 layers, 2624080 parameters, 2624064 gradients
 model = model3
 
-###################################################################################################################################
-# Example concatinate multi model
-# Extract boxes, scores and classes
-    boxes1 = results1.xyxy[0][:, :4].cpu().numpy()
-    scores1 = results1.xyxy[0][:, 4].cpu().numpy()
-    classes1 = results1.xyxy[0][:, 5].cpu().numpy()
-
-    boxes2 = results2.xyxy[0][:, :4].cpu().numpy()
-    scores2 = results2.xyxy[0][:, 4].cpu().numpy()
-    classes2 = results2.xyxy[0][:, 5].cpu().numpy()
-
-    boxes3 = results3.xyxy[0][:, :4].cpu().numpy()
-    scores3 = results3.xyxy[0][:, 4].cpu().numpy()
-    classes3 = results3.xyxy[0][:, 5].cpu().numpy()
-
-    # Combine boxes, scores and classes
-    all_boxes = np.concatenate([boxes1, boxes2, boxes3])
-    all_scores = np.concatenate([scores1, scores2, scores3])
-    all_classes = np.concatenate([classes1, classes2, classes3])
-
-    # delete redondantes
-    keep_indices = nms(torch.tensor(all_boxes), torch.tensor(all_scores), iou_threshold=0.5)
-    final_boxes = all_boxes[keep_indices]
-    final_scores = all_scores[keep_indices]
-    final_classes = all_classes[keep_indices]
-
-    return final_boxes, final_scores, final_classes
-
-###################################################################################################################################
 
 x1=1000
 # Open video

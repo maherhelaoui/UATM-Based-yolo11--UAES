@@ -8,8 +8,13 @@
 #journal={Machine Vision and Applications (Submited)}, 
 #url = {https://github.com/maherhelaoui/UATM-Based-yolo11--UAES}, 
 #year={2025}, publisher={Springer} }
-
-
+##############
+# Installation
+##############
+#pip install opencv-python
+#pip install torch torchvision
+#pip install ultralytics  # For YOLO11++
+#pip install numpy
 
 
 import os

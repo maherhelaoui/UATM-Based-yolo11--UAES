@@ -4,8 +4,8 @@
 #@article{hel25YOLO11++UAES,
 #  title={Universal Autonomous Driving System: Innovation with YOLO11++-based Universal Autonomous Expert System},
 #  author={Maher, Helaoui and Sahbi, Bahroun and Ezzeddine, Zagrouba},
-#  journal={The Visual Computer (Submited)},
-#  url = {[https://github.com/ultralytics/ultralytics](https://github.com/maherhelaoui/YOLO11pp-based-UAES/)},
+#  journal={Machine Vision and Applications (Submited)},
+#  url = {https://github.com/maherhelaoui/UATM-Based-yolo11--UAES/},
 #  year={2025},
 #  publisher={Springer}
 #}

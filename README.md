@@ -240,7 +240,7 @@ ________________________________________________________________________________
 ____________________________________________________________________________________________________________________
 
 @article{hel25YOLO11++UAES, 
-title={Universal Autonomous Turing Machine Based YOLO11++ detector and Universal Autonomous Expert System for Driving System}, author={Maher, Helaoui and Sahbi, Bahroun and Ezzeddine, Zagrouba}, journal={Machine Vision and Applications (Submitted)}, url = {https://github.com/maherhelaoui/YOLO11pp-based-UAES/}, year={2025}, publisher={Springer} }
+title={Universal Autonomous Turing Machine Based YOLO11++ detector and Universal Autonomous Expert System for Driving System}, author={Maher, Helaoui and Sahbi, Bahroun and Ezzeddine, Zagrouba}, journal={Machine Vision and Applications (Submitted)}, url = {https://github.com/maherhelaoui/UATM-Based-yolo11--UAES}, year={2025}, publisher={Springer} }
 
 
 

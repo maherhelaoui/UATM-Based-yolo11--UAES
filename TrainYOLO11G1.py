@@ -25,7 +25,7 @@ from collections import deque
 
 
 # YOLO11 is trained on coco dataset.
-#Train YOLO11G1 on different Datasets 
+#Train YOLO11G1 on different Datasets => Obtain YOLO11G2 
 
 model = YOLO("yolo11n.yaml")
 # Charger les modèles YOLO

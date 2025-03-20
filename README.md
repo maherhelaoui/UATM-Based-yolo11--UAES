@@ -56,17 +56,29 @@ results = model.train(data="coco128.yaml", epochs=100) # Train CC128 Dataset use
 
 
 
-To Train YOLO11++ on different Datasets you can use 
+To Train YOLO11G1 on different Datasets you can use 
 
-$ python TrainYOLO11Gi.py
+$ python TrainYOLO11G1.py
 or
-$ python3 TrainYOLO11Gi.py
+$ python3 TrainYOLO11G1.py
+
+
+To Train YOLO11G3 on different Datasets you can use 
+
+$ python TrainYOLO11G3.py
+or
+$ python3 TrainYOLO11G3.py
 
  
 
 Each yolo11Gi model is generated as decribed in Neural Computing and Applications journal paper.
 
+To generate yolo11G0, yolo11G3 and yolo11G4 you can use
 
+
+$ python GenerateyoloGi.py
+or
+$ python3 GenerateyoloGi.py
 ______________________________________________________________________________________________________________________
 
                              B Real Word Simplified Demo of Universal Autonomous Driving System 

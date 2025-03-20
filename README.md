@@ -1,86 +1,70 @@
-# Universal Autonomous Turing Machine Based yolo11++ detector and UAES For Driving System 
+# A Universal Autonomous Turing Machine Based YOLO11$_{gen_i}$ detector and Artificial Neural Expert System for Autonomous Driving Problem
+ 
 
 ____________________________________________________________________________________________________________________
 
                                  
-                                    A. yolo11++ proposed detector                               
+                                    A. yolo11$_{gen_i}$ proposed detector                               
 
 
 ____________________________________________________________________________________________________________________
 
-To train and test the proposed detector yolo11++ with the different studied datasets you can use TrainYolo11++.ipynb 
+To train and test the proposed detector yolo11$_{gen_i}$ with the different studied datasets you can use TrainYolo11Gi.ipynb 
 available in this repository. It is tested on Colab.
-Or you can use TrainYOLO11++.py file  
-YOLO11++ needs installing
+Or you can use TrainYOLO11Gi.py file  
+YOLO11$_{gen_i}$ needs installing
 
-pip install ultralytics  # For YOLO11++ like YOLO11 (https://docs.ultralytics.com/quickstart/#install-ultralytics)
+pip install ultralytics  # like YOLO11 (https://docs.ultralytics.com/quickstart/#install-ultralytics)
 _____________________________________________________________________________________________________________________
                                         
                                         Download trained models
 
 _____________________________________________________________________________________________________________________
 
-We prepared for each Dataset a trained model of yolo11++ as proposed in the Visual computer paper. 
-We present a best trained model of yolo11++ for each studied Dataset.
+We prepared for each Dataset a trained model of yolo11$_{gen_i}$ as proposed in Neural Computing & Applications submitted paper. 
+We present a best trained model of yolo11$_{gen_i}$ for each studied Dataset.
 
-Trained Model 1. yolo11++MP.pt : Trained model of yolo11++ for Medical-Pills MP Dataset
-Trained Model 2. yolo11++GW.pt : Trained model of yolo11++ for GlobalWheat2020 GW Dataset
-Trained Model 3. yolo11++S.pt : Trained model of yolo11++ for Signature S Dataset
-Trained Model 4. yolo11++AW.pt : Trained model of yolo11++ for African-Wildlife AW Dataset
-Trained Model 5. yolo11++BT.pt : Trained model of yolo11++ for Brain-Tumor BT Dataset
+Trained Model 1. yolo11G1MP.pt : Trained model of yolo11$_{gen_1}$ for Medical-Pills MP Dataset
+Trained Model 2. yolo11G1GW.pt : Trained model of yolo11$_{gen_1}$ for GlobalWheat2020 GW Dataset
+Trained Model 3. yolo11G1S.pt : Trained model of yolo11$_{gen_1}$ for Signature S Dataset
+Trained Model 4. yolo11G1AW.pt : Trained model of yolo11$_{gen_1}$ for African-Wildlife AW Dataset
+Trained Model 5. yolo11G1BT.pt : Trained model of yolo11$_{gen_1}$ for Brain-Tumor BT Dataset
 
 ______________________________________________________________________________________________________________________
  
-                                 Train YOLO11++ on different Datasets i
+                                 Train YOLO11$_{gen_i}$ on different Datasets j
 ______________________________________________________________________________________________________________________
  
 
-# For each Dataseti we charge the trained YOLO++ Models
-#model3 = YOLO("yolo11++MP.pt")  # if model.train(data="medical-pills.yaml", epochs=100)
-#model3 = YOLO("yolo11++GW.pt")  # if model.train(data="GlobalWheat2020.yaml", epochs=100)
-#model3 = YOLO("yolo11++S.pt")  # if model.train(data="signature.yaml", epochs=100)
-#model3 = YOLO("yolo11++AW.pt")  # if model.train(data="african-wildlife.yaml", epochs=100)
-#model3 = YOLO("yolo11++BT.pt")  # if model.train(data="brain-tumor.yaml", epochs=100)
-model3 = YOLO("yolo11++CC128.pt")  # if model.train(data="coco128.yaml", epochs=100)
+# For each Dataset j we charge the trained YOLOG1 Models
+#model3 = YOLO("yolo11G1MP.pt")  # if model.train(data="medical-pills.yaml", epochs=100)
+#model3 = YOLO("yolo11G1GW.pt")  # if model.train(data="GlobalWheat2020.yaml", epochs=100)
+#model3 = YOLO("yolo11G1S.pt")  # if model.train(data="signature.yaml", epochs=100)
+#model3 = YOLO("yolo11G1AW.pt")  # if model.train(data="african-wildlife.yaml", epochs=100)
+#model3 = YOLO("yolo11G1BT.pt")  # if model.train(data="brain-tumor.yaml", epochs=100)
+model3 = YOLO("yolo11G1CC128.pt")  # if model.train(data="coco128.yaml", epochs=100)
 model = model3
 
 
-# Train chargedYOLO Model on each Dataseti
-#results = model.train(data="medical-pills.yaml", epochs=100, imgsz=640) # Train MP Dataset use model yolo11++MP.pt
-#results = model.train(data="GlobalWheat2020.yaml", epochs=100, imgsz=640) # Train GW Dataset use model yolo11++GW.pt
-#results = model.train(data="signature.yaml", epochs=100, imgsz=640) # Train SD Dataset use model yolo11++S.pt
-#results = model.train(data="african-wildlife.yaml", epochs=100, imgsz=640) # Train AW Dataset use model yolo11++AW.pt
-#results = model.train(data="brain-tumor.yaml", epochs=100, imgsz=640) # Train BT Dataset use model yolo11++BT.pt
-results = model.train(data="coco128.yaml", epochs=100) # Train CC128 Dataset use model yolo11++CC128.pt 
+# Train chargedYOLO Model on each Dataset j
+#results = model.train(data="medical-pills.yaml", epochs=100, imgsz=640) # Train MP Dataset use model yolo11G1MP.pt
+#results = model.train(data="GlobalWheat2020.yaml", epochs=100, imgsz=640) # Train GW Dataset use model yolo11G1GW.pt
+#results = model.train(data="signature.yaml", epochs=100, imgsz=640) # Train SD Dataset use model yolo11G1S.pt
+#results = model.train(data="african-wildlife.yaml", epochs=100, imgsz=640) # Train AW Dataset use model yolo11G1AW.pt
+#results = model.train(data="brain-tumor.yaml", epochs=100, imgsz=640) # Train BT Dataset use model yolo11G1BT.pt
+results = model.train(data="coco128.yaml", epochs=100) # Train CC128 Dataset use model yolo11G1CC128.pt 
 
 
 
 To Train YOLO11++ on different Datasets you can use 
 
-$ python TrainYOLO11++.py
+$ python TrainYOLO11Gi.py
 or
-$ python3 TrainYOLO11++.py
+$ python3 TrainYOLO11Gi.py
 
-You can charge the trained YOLO++ Models by selecting one from this list in TrainYOLO11++.py
-#model3 = YOLO("yolo11++MP.pt")  # if model.train(data="medical-pills.yaml", epochs=100)
-#model3 = YOLO("yolo11++GW.pt")  # if model.train(data="GlobalWheat2020.yaml", epochs=100)
-#model3 = YOLO("yolo11++S.pt")  # if model.train(data="signature.yaml", epochs=100)
-#model3 = YOLO("yolo11++AW.pt")  # if model.train(data="african-wildlife.yaml", epochs=100)
-#model3 = YOLO("yolo11++BT.pt")  # if model.train(data="brain-tumor.yaml", epochs=100)
-model3 = YOLO("yolo11++CC128.pt")  # if model.train(data="coco128.yaml", epochs=100)
-model = model3
+ 
 
-
-You can change the used dataset by selecting one from this list in TrainYOLO11++.py
-
-#results = model.train(data="medical-pills.yaml", epochs=100, imgsz=640) # Train MP Dataset use model yolo11++MP.pt
-#results = model.train(data="GlobalWheat2020.yaml", epochs=100, imgsz=640) # Train GW Dataset use model yolo11++GW.pt
-#results = model.train(data="signature.yaml", epochs=100, imgsz=640) # Train SD Dataset use model yolo11++S.pt
-#results = model.train(data="african-wildlife.yaml", epochs=100, imgsz=640) # Train AW Dataset use model yolo11++AW.pt
-#results = model.train(data="brain-tumor.yaml", epochs=100, imgsz=640) # Train BT Dataset use model yolo11++BT.pt
-results = model.train(data="coco128.yaml", epochs=100) # Train CC128 Dataset use model yolo11++CC128.pt 
-
-Each yolo11++ model is generated as decribed in Machine Vision and Applications journal paper.
+Each yolo11Gi model is generated as decribed in Neural Computing and Applications journal paper.
 
 
 ______________________________________________________________________________________________________________________

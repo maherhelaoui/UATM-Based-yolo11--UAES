@@ -79,9 +79,11 @@ ________________________________________________________________________________
                              B Real Word Simplified Demo of Universal Autonomous Driving System 
 ______________________________________________________________________________________________________________________
 #Tor run this demonstartion of UADS you can use main.ipynb on Colab. Or Demo.py on your machine
-# You can download VIDS18.mp4 from Real word proposed dataset available in https://drive.google.com/file/d/1nb-DZDMq62G_w_xrNAZzeS-oNx4GxOAC/view?usp=drive_link
-# Please add VIDS18.mp4 to your work space on Colab or your machine
-
+# Please download: $ git clone https://github.com/maherhelaoui/UATM-Based-yolo11--UAES  
+# install : $ pip install opencv-python
+# install : $ pip install torch torchvision
+# install : $ pip install ultralytics  # For YOLO11Gi
+# install : $ pip install numpy 
 import os
 import shutil
 from pathlib import Path
@@ -98,25 +100,24 @@ from collections import deque
 #Create a concatenation of 3 different models results
 
 model = YOLO("yolo11n.yaml")
-model1 = YOLO("yolov8sign.pt")  # detect all sign. You can use any sign detector Model. The model chosed in this demo is mensioned in the Visual computer journal paper. It must be added to the work space. 
+model1 = YOLO("yolov8sign.pt")  # detect all sign. You can select and use any sign detector. It must be added.
 model = model1
-model2 = YOLO("yolov8nbt.pt")  # detect traffic Light red green yellow. You can use any traffic Light detector Model. The model chosed in this demo is mensioned in the Visual computer journal paper. It must be added to the work space. 
+model2 = YOLO("yolov8nbt.pt")  # detect traffic Light red green yellow. You can use any traffic light detector.
 model = model2
-model3 = YOLO("yolo11++CC128.pt")  # This traned model is the most adequate to detect cars bus trained on Coco128 Dataset 
+model3 = YOLO("yolo11G1CC128.pt")  # detect cars bus trained on Coco Dataset 319 layers, 2624080 parameters, 2624064 gradients
 model = model3
-
 
 
 x1=1000
 # Open video
-video_path = "VIDS18.mp4"
+video_path = "VIDS1c.mp4"    # you can test another video from VIDSxc Real Video DataSet or propose one
 cap = cv2.VideoCapture(video_path)
 
 # Detect speed demo
 fps = cap.get(cv2.CAP_PROP_FPS)
 frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-output_video = cv2.VideoWriter('VIDS/VIDSVDMD13.mp4', cv2.VideoWriter_fourcc(*'mp4v'), fps, (frame_width, frame_height))
+output_video = cv2.VideoWriter('VIDSVDMD1c.mp4', cv2.VideoWriter_fourcc(*'mp4v'), fps, (frame_width, frame_height))
 
 # traked objects
 tracked_objects = {}
@@ -140,7 +141,7 @@ def read_traffic_signs(frame):
                      cv2.putText(frame, "Recommend: Worning object ", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), 2)
                else :
                 cv2.putText(frame, "Recommend: Keep Line", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-         
+
     for r in results2:
        for box in r.boxes:
           print(int(box.cls))
@@ -151,11 +152,11 @@ def read_traffic_signs(frame):
     for r in results1:
        #print(model1.names)
        for box in r.boxes:
-          #print(box.cls)) 
+          #print(box.cls))
           if(int(box.cls)):
              print(int(box.cls))
              #cv2.putText(frame, f"                               id :{int(box.cls)}", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
-    
+
 
 # Demo display recommendations (simplified)
 def display_recommendations(frame, sign):
@@ -206,6 +207,18 @@ while cap.isOpened():
     # display_recommendations
     display_recommendations(frame, sign)
 
+    # Output Video
+    output_video.write(frame)
+
+    # Display frame (optionnel)
+    #cv2.imshow("Frame", frame)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+# Free ressources
+cap.release()
+output_video.release()
+cv2.destroyAllWindows()
     # Output Video
     output_video.write(frame)
 

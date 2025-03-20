@@ -2,10 +2,10 @@
 #please cite it using the following format:
 
 #BibTeX 
-#@article{hel25YOLO11++UAES, 
+#@article{hel25YOLO11G1ANES, 
 #title={Universal Autonomous Driving System: Innovation with YOLO11++-based Universal Autonomous Expert System}, 
 #author={Maher, Helaoui and Sahbi, Bahroun and Ezzeddine, Zagrouba}, 
-#journal={Machine Vision and Applications (Submited)}, 
+#journal={Neural Computing and Applications (Submited)}, 
 #url = {https://github.com/maherhelaoui/UATM-Based-yolo11--UAES}, 
 #year={2025}, publisher={Springer} }
 ##############
@@ -13,7 +13,7 @@
 ##############
 #pip install opencv-python
 #pip install torch torchvision
-#pip install ultralytics  # For YOLO11++
+#pip install ultralytics  # For YOLO11Gi
 #pip install numpy
 
 
@@ -38,20 +38,20 @@ model1 = YOLO("yolov8sign.pt")  # detect all sign. You can select and use any si
 model = model1
 model2 = YOLO("yolov8nbt.pt")  # detect traffic Light red green yellow. You can use any traffic light detector.
 model = model2
-model3 = YOLO("yolo11++CC128.pt")  # detect cars bus trained on Coco Dataset 319 layers, 2624080 parameters, 2624064 gradients
+model3 = YOLO("yolo11G1CC128.pt")  # detect cars bus trained on Coco Dataset 319 layers, 2624080 parameters, 2624064 gradients
 model = model3
 
 
 x1=1000
 # Open video
-video_path = "VIDS18.mp4"
+video_path = "VIDS18c.mp4"
 cap = cv2.VideoCapture(video_path)
 
 # Detect speed demo
 fps = cap.get(cv2.CAP_PROP_FPS)
 frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-output_video = cv2.VideoWriter('VIDSVDMD18.mp4', cv2.VideoWriter_fourcc(*'mp4v'), fps, (frame_width, frame_height))
+output_video = cv2.VideoWriter('VIDSVDMD18c.mp4', cv2.VideoWriter_fourcc(*'mp4v'), fps, (frame_width, frame_height))
 
 # traked objects
 tracked_objects = {}

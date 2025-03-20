@@ -63,22 +63,17 @@ or
 $ python3 TrainYOLO11G1.py
 
 
-To Train YOLO11G3 on different Datasets you can use 
-
-$ python TrainYOLO11G3.py
-or
-$ python3 TrainYOLO11G3.py
 
  
 
 Each yolo11Gi model is generated as decribed in Neural Computing and Applications journal paper.
 
-To generate yolo11G0, yolo11G3 and yolo11G4 you can use
+To Generate and Train yolo11G0, yolo11G3 and yolo11G4 you can use
 
 
-$ python GenerateyoloGi.py
+$ python GenerateTrainYolo11Gi.py
 or
-$ python3 GenerateyoloGi.py
+$ python3 GenerateTrainYolo11Gi.py
 ______________________________________________________________________________________________________________________
 
                              B Real Word Simplified Demo of Universal Autonomous Driving System 

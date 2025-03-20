@@ -39,12 +39,12 @@ model = model3
 
 
 
-#results = model.train(data="medical-pills.yaml", epochs=30, imgsz=640) # Train MP Dataset use model yolo11++MP.pt
-#results = model.train(data="GlobalWheat2020.yaml", epochs=30, imgsz=640) # Train GW Dataset use model yolo11++GW.pt
-#results = model.train(data="signature.yaml", epochs=30, imgsz=640) # Train SD Dataset use model yolo11++S.pt
-#results = model.train(data="african-wildlife.yaml", epochs=30, imgsz=640) # Train AW Dataset use model yolo11++AW.pt
-#results = model.train(data="brain-tumor.yaml", epochs=30, imgsz=640) # Train BT Dataset use model yolo11++BT.pt
-results = model.train(data="coco128.yaml", epochs=30) # Train CC128 Dataset use model yolo11++CC128.pt 
+#results = model.train(data="medical-pills.yaml", epochs=30, imgsz=640) # Train MP Dataset use model yolo11G1MP.pt => obtain yolo11G2MP.pt
+#results = model.train(data="GlobalWheat2020.yaml", epochs=30, imgsz=640) # Train GW Dataset use model yolo11G1GW.pt => obtain yolo11G2GW.pt
+#results = model.train(data="signature.yaml", epochs=30, imgsz=640) # Train SD Dataset use model yolo11G1S.pt => obtain yolo11G2S.pt
+#results = model.train(data="african-wildlife.yaml", epochs=30, imgsz=640) # Train AW Dataset use model yolo11G1AW.pt => obtain yolo11G2AW.pt 
+#results = model.train(data="brain-tumor.yaml", epochs=30, imgsz=640) # Train BT Dataset use model yolo11G1BT.pt => obtain yolo11G2BT.pt 
+results = model.train(data="coco128.yaml", epochs=30) # Train CC128 Dataset use model yolo11G1CC128.pt => obtain yolo11G2CC128.pt 
 
 
 

@@ -61,6 +61,8 @@ To Train YOLO11G1 on different Datasets you can use
 $ python TrainYOLO11G1.py
 or
 $ python3 TrainYOLO11G1.py
+or 
+use colab to run TrainG1GenerateG2.ipynb
 
 
 

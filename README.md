@@ -9,8 +9,8 @@ ________________________________________________________________________________
 
 ____________________________________________________________________________________________________________________
 
-To train and test the proposed detector yolo11$_{gen_i}$ with the different studied datasets you can use TrainYolo11Gi.ipynb 
-available in this repository. It is tested on Colab.
+To train and test the proposed detector yolo11$_{gen_i}$ with the different studied datasets you can use 
+TrainG1GenerateG2.ipynb or TrainYOLO11Gi.ipynb available in this repository. They are tested on Colab.
 Or you can use TrainYOLO11Gi.py file  
 YOLO11$_{gen_i}$ needs installing
 

@@ -80,7 +80,7 @@ ________________________________________________________________________________
 
                              B Real Word Simplified Demo of Universal Autonomous Driving System 
 ______________________________________________________________________________________________________________________
-#Tor run this demonstartion of UADS you can use main.ipynb on Colab. Or Demo.py on your machine
+#Tor run this demonstartion of UADS you can use main.ipynb on Colab. Or main.py on your machine
 # Please download: $ git clone https://github.com/maherhelaoui/UATM-Based-yolo11--UAES  
 # install : $ pip install opencv-python
 # install : $ pip install torch torchvision

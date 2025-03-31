@@ -1,18 +1,18 @@
-# A Universal Autonomous Turing Machine Based YOLO11$_{gen_i}$ detector and Artificial Neural Expert System for Autonomous Driving Problem
+# A Universal Autonomous Turing Machine Based YOLO$_{Gen^*}$ detector and Artificial Neural Expert System for Autonomous Driving Problem
  
 
 ____________________________________________________________________________________________________________________
 
                                  
-                                    A. yolo11$_{gen_i}$ proposed detector                               
+                                    A. yolo$_{Gen_i}$ proposed detector                               
 
 
 ____________________________________________________________________________________________________________________
 
-To train and test the proposed detector yolo11$_{gen_i}$ with the different studied datasets you can use 
+To train and test the proposed detector yolo$_{gen_i}$ with the different studied datasets you can use 
 TrainG1GenerateG2.ipynb or GenerateYOLO11Gi.ipynb available in this repository. They are tested on Colab.
 Or you can use TrainYOLO11G1.py or TrainYOLO11Gi.py file  
-YOLO11$_{gen_i}$ needs installing
+YOLO$_{gen_i}$ needs installing
 
 pip install ultralytics  # like YOLO11 (https://docs.ultralytics.com/quickstart/#install-ultralytics)
 _____________________________________________________________________________________________________________________
@@ -24,15 +24,15 @@ ________________________________________________________________________________
 We prepared for each Dataset a trained model of yolo11$_{gen_i}$ as proposed in Neural Computing & Applications submitted paper. 
 We present a best trained model of yolo11$_{gen_i}$ for each studied Dataset.
 
-Trained Model 1. yolo11G1MP.pt : Trained model of yolo11$_{gen_1}$ for Medical-Pills MP Dataset
-Trained Model 2. yolo11G1GW.pt : Trained model of yolo11$_{gen_1}$ for GlobalWheat2020 GW Dataset
-Trained Model 3. yolo11G1S.pt : Trained model of yolo11$_{gen_1}$ for Signature S Dataset
-Trained Model 4. yolo11G1AW.pt : Trained model of yolo11$_{gen_1}$ for African-Wildlife AW Dataset
-Trained Model 5. yolo11G1BT.pt : Trained model of yolo11$_{gen_1}$ for Brain-Tumor BT Dataset
+Trained Model 1. yolo11G1MP.pt : Trained model of yolo$_{gen_1}$ for Medical-Pills MP Dataset
+Trained Model 2. yolo11G1GW.pt : Trained model of yolo$_{gen_1}$ for GlobalWheat2020 GW Dataset
+Trained Model 3. yolo11G1S.pt : Trained model of yolo$_{gen_1}$ for Signature S Dataset
+Trained Model 4. yolo11G1AW.pt : Trained model of yolo$_{gen_1}$ for African-Wildlife AW Dataset
+Trained Model 5. yolo11G1BT.pt : Trained model of yolo$_{gen_1}$ for Brain-Tumor BT Dataset
 
 ______________________________________________________________________________________________________________________
  
-                                 Train YOLO11$_{gen_i}$ on different Datasets j
+                                 Train YOLO$_{gen_i}$ on different Datasets j
 ______________________________________________________________________________________________________________________
  
 
@@ -56,7 +56,7 @@ results = model.train(data="coco128.yaml", epochs=100) # Train CC128 Dataset use
 
 
 
-To Train YOLO11G1 on different Datasets you can use 
+To Train YOLOG1 on different Datasets you can use 
 
 $ python TrainYOLO11G1.py
 or
@@ -68,9 +68,9 @@ use colab to run TrainG1GenerateG2.ipynb
 
  
 
-Each yolo11Gi model is generated as decribed in Neural Computing and Applications journal paper.
+Each yoloGi model is generated as decribed in Neural Computing and Applications journal paper.
 
-To Generate and Train yolo11G0, yolo11G3 and yolo11G4 you can use
+To Generate and Train yoloG0, yoloG3 and yoloG4 you can use
 
 
 $ python GenerateTrainYolo11Gi.py
@@ -84,7 +84,7 @@ ________________________________________________________________________________
 # Please download: $ git clone https://github.com/maherhelaoui/UATM-Based-yolo11--UAES  
 # install : $ pip install opencv-python
 # install : $ pip install torch torchvision
-# install : $ pip install ultralytics  # For YOLO11Gi
+# install : $ pip install ultralytics  # For YOLOGi
 # install : $ pip install numpy 
 import os
 import shutil
@@ -95,7 +95,7 @@ import torch
 from ultralytics import YOLO
 from collections import deque
 #make a trained model on different datasets is it importants ?
-#How improve yolo 11 ?
+
 # YOLO11 is trained on coco dataset.
 # what is the result if we concatinate a multi trained models ?
 #Create new model by generate boxes, scores, classes as concatenation of 3 boxes, scores, classes
@@ -246,7 +246,7 @@ ________________________________________________________________________________
 ____________________________________________________________________________________________________________________
 
 @article{hel25YOLO11GiANES, 
-title={A Universal Autonomous Turing Machine Based YOLO11$_{gen_i}$ detector and Artificial Neural Expert System for Autonomous Driving Problem}, author={Maher, Helaoui and Sahbi, Bahroun and Ezzeddine, Zagrouba}, journal={Progress in Artificial Intelligence (Submitted)}, url = {https://github.com/maherhelaoui/UATM-Based-yolo11--UAES}, year={2025}, publisher={Springer} }
+title={A Universal Autonomous Turing Machine Based YOLO$_{gen^*}$ detector and Artificial Neural Expert System for Autonomous Driving Problem}, author={Maher, Helaoui and Sahbi, Bahroun and Ezzeddine, Zagrouba}, journal={Progress in Artificial Intelligence (Submitted)}, url = {https://github.com/maherhelaoui/UATM-Based-yolo11--UAES}, year={2025}, publisher={Springer} }
 
 
 

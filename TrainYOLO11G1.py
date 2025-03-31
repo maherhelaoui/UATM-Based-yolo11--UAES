@@ -2,9 +2,9 @@
 
 #BibTeX
 #@article{hel25YOLO11G1ANES,
-#  title={Universal Autonomous Driving System: Innovation with YOLO11++-based Universal Autonomous Expert System},
+#  title={A Universal Autonomous Turing Machine-Based YOLO$_{Gen^*}$ detector and Artificial Neural Expert System for Autonomous Driving Problem},
 #  author={Maher, Helaoui and Sahbi, Bahroun and Ezzeddine, Zagrouba},
-#  journal={Neural Computing and Applications (Submited)},
+#  journal={Progress in Artificial Intelligence (Submited)},
 #  url = {https://github.com/maherhelaoui/UATM-Based-yolo11--UAES/},
 #  year={2025},
 #  publisher={Springer}
